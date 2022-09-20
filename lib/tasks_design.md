@@ -47,7 +47,7 @@ todo_list.list => []
 2
 
 todo_list = TodoList.new
-todo_list.add("Blow out candles)
+todo_list.add("Blow out candles")
 todo_list.list => ["Blow out candles"]
 
 3
