@@ -24,7 +24,7 @@ RSpec.describe Playlist do
   end
 
   context 'when given a duplicate song' do
-    it 'does not add duplicates to the playlist'
+    it 'does not add duplicates to the playlist' do
       playlist = Playlist.new
       playlist.add("Mother Goose")
       playlist.add("Merry Christmas")
