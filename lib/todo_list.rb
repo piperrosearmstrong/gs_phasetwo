@@ -10,18 +10,18 @@ class TodoList
   end
   
   def incomplete
-    @list.each do |task|
-      @done.index(task) ? true : puts 
-    end
+    @list.select { |task| !task.done? }.map { |task| task.task }
       # Returns all non-done todos
-    #   WORK ON THIS SECTION PIPER. RUN RSPEC.
   end
   
   def complete
+    complete = @list.select { |task| task.done? }.map { |task| task.task }
       # Returns all complete todos
   end
   
   def give_up!
+    @list.select { |task| !task.done? }.map { |task| task.mark_done! }
+    complete
       # Marks all todos as complete
   end
 end
